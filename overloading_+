@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class complex
+{
+public:
+        int real;
+        int imaginary;
+       
+        void getValue()
+        {
+            cin>>real;
+            cin>>imaginary;
+        }
+        complex operator +(complex c2)
+        {
+            complex temp;
+            temp.real = real +c2.real;
+            temp.imaginary = imaginary + c2.imaginary;
+            return temp;
+        }
+        void print()
+        {
+            cout<<real<<"+"<<imaginary<<"i";
+        }
+};
+int main() 
+{
+    complex c1;
+    complex c2;
+    complex c3;
+    c1.getValue();
+    c2.getValue();
+    c3 = c1 +c2;
+    c3.print();
+
+    return 0;
+}
